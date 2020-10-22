@@ -1,0 +1,20 @@
+main-css:
+  output: ckanext-reclineview/%(version)s_pdfview.css
+  filters: cssrewrite
+  contents:
+    - vendor/pdfjs/web/viewer.css
+    - css/pdf.css
+
+main:
+  output: ckanext-pdfview/%(version)s_pdfview.js
+  extra:
+    preload:
+      - base/main
+      - ckanext-pdfview/main-css
+  contents:
+    - vendor/pdfjs/web/l10n.js
+    - vendor/pdfjs/web/compatibility.js
+    - vendor/pdfjs/build/pdf.js
+    - vendor/pdfjs/build/pdf.worker.js
+    - vendor/pdfjs/web/viewer.js
+    - pdf_view.js
