@@ -1,5 +1,5 @@
 main-css:
-  output: ckanext-reclineview/%(version)s_pdfview.css
+  output: ckanext-pdfview/%(version)s_pdfview.css
   filters: cssrewrite
   contents:
     - vendor/pdfjs/web/viewer.css
