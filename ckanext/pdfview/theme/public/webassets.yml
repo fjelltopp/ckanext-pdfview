@@ -1,16 +1,16 @@
-main-css:
+pdfview-css:
   output: ckanext-pdfview/%(version)s_pdfview.css
   filters: cssrewrite
   contents:
     - vendor/pdfjs/web/viewer.css
     - css/pdf.css
 
-main:
+pdfview:
   output: ckanext-pdfview/%(version)s_pdfview.js
   extra:
     preload:
       - base/main
-      - ckanext-pdfview/main-css
+      - ckanext-pdfview/pdfview-css
   contents:
     - vendor/pdfjs/web/l10n.js
     - vendor/pdfjs/web/compatibility.js
