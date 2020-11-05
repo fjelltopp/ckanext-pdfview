@@ -306,10 +306,10 @@
     var pdfjs_workerSrc = "{{ h.urls_for_resource('ckanext-pdfview/vendor/pdfjs/build/pdf.worker.js')[-1] }}";
     // should user open new window/tab using Current View PDF.js control
     var body=document.getElementsByTagName('body')[0];
-    if (window.top==window.self) { 
+    if (window.top==window.self) {
        body.style.height = '100%';
     }
   </script>
-  {% resource 'ckanext-pdfview/vendor/pdfjs/build/pdf.js' %}
-  {% resource 'ckanext-pdfview/main' %}
+  {% asset 'ckanext-pdfview/vendor/pdfjs/build/pdf.js' %}
+  {% asset 'ckanext-pdfview/pdfview' %}
 {% endblock %}

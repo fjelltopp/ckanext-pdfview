@@ -1,4 +1,4 @@
-ckan.module('pdf_view', function () {
+this.ckan.module('pdf_view', function () {
   return {
     initialize: function () {
       // set pdfjs worker uri
